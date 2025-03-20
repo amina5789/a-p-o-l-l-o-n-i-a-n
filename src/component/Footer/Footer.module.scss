@@ -1,0 +1,151 @@
+.footerContainer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #DDD9D7;
+    height: 343px;
+    padding-top: 84px;
+  }
+  
+  .leftContainer {
+    display: flex;
+    gap: 40px;
+    width: 60%;
+  }
+  
+  .leftContainer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 200px; 
+    font-size: 14px;
+  }
+  
+  .leftContainer ul li {
+    margin-bottom: 10px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .leftContainer ul li:first-child {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  
+  .leftContainer ul li:hover {
+    color: #a8895d;
+  } 
+  
+  .rightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .rightContainer h6 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .rightContainer input {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .rightContainer button {
+    padding: 8px 15px;
+    background-color: #a8895d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .rightContainer button:hover {
+    background-color: #8d724d;
+  }
+  
+  .iconContainer {
+    display: flex;
+    gap: 55px;
+    margin-top: 20px;
+  }
+  
+  .iconContainer img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .iconContainer img:hover {
+    transform: scale(1.1);
+  }
+  
+
+
+@media(max-width:937px) {
+    .leftContainer{
+        display: none;
+    }
+
+    .iconContainer {
+        gap: 25px;
+      }
+}
+
+
+
+
+  @media (max-width: 768px) {
+    .footerContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .leftContainer {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .leftContainer ul {
+      width: 45%;
+    }
+  
+    .rightContainer {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .leftContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .leftContainer ul {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .rightContainer input {
+      width: 100%;
+    }
+  
+    .rightContainer button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .iconContainer {
+      justify-content: center;
+    }
+  }
+  

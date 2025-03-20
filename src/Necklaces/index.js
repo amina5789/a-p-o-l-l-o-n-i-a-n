@@ -1,0 +1,1 @@
+import { Necklaces } from "./Necklaces";

@@ -1,0 +1,105 @@
+.gifttContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 102px;
+    margin-top: 71px;
+    margin-bottom: 73px;
+    height: 498px;
+// background-color: #E5A97D;
+background: #f4f0eb, linear-gradient(301deg, rgba(229, 169, 125, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+background-color: #F4F0EB;
+}
+
+
+.img{
+    width: 651px;
+height: 498px;
+background:  url("./../../assets/img/Rectangle\ 37.png");
+}
+
+.pGift{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 23px;
+color: #000;
+}
+
+
+.btnGift{
+    font-family: var(--font-family);
+font-weight: 435;
+font-size: 21px;
+text-align: center;
+color: #000;
+border: 1px solid #000;
+width: 145px;
+height: 51px;
+background-color: rgba(207, 199, 195, 0)
+
+}
+
+
+.btnGift:hover{
+    background-color: rgb(250, 242, 232);
+
+}
+
+
+.season{
+    font-family: var(--second-family);
+font-weight: 700;
+font-size: 45px;
+color: #000;
+}
+
+
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 100px;}
+
+    @media(max-width:1215px){
+.pGift{
+    font-size: 15px;
+}
+
+.btnGift{
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+}
+
+.season{
+    font-size: 30px;
+}
+
+
+.img{
+    width: 400px;
+    height: 498px;
+}
+
+.gifttContainer{
+    gap: 30px;
+}
+
+
+.leftContainer{
+
+
+    margin-left: 50px;}
+
+    }
+
+
+@media(max-width: 768px){
+   
+    .img{
+display: none;
+    }
+
+ 
+}
+   

@@ -1,0 +1,376 @@
+.imgReadMore{
+    border: 1px solid rgba(216, 209, 206, 0.74);
+width: 453px;
+height: 670px;
+}
+
+
+.date{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 17px;
+color: #000;
+}
+
+
+.golden{
+    font-family: var(--second-family);
+font-weight: 400;
+font-size: 40px;
+color: #000;
+
+}
+
+
+.pOne{
+    font-family: var(--font-family);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    color: #696969;
+    width: 738px;
+}
+
+
+.ptwo{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    color: #2d2d2d;
+    width: 738px;
+}
+
+
+.pContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+
+.oneContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 91px;
+    // padding-top: 61px;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.oneP{
+    font-family: var(--second-family);
+font-style: italic;
+font-weight: 400;
+font-size: 30px;
+text-align: center;
+color: #000;
+}
+
+
+.twoP{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #676767;
+}
+
+
+.twoContainer{
+    padding-top: 51px;  
+}
+
+.img2{
+    border: 1px solid rgba(216, 209, 206, 0.74);
+width: 453px;
+height: 328px;
+}
+
+
+
+
+.pCursor{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 22px;
+color: #2d2d2d;
+width: 708px;
+}
+
+
+.threeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 79px;
+    // padding-bottom: 112px;
+    // padding-top: 39px;
+}
+
+.end2{
+    border: 1px solid rgba(0, 0, 0, 0.22);
+width: 300px;
+height: 1px;
+}
+
+
+.readMoreContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 61px;
+    gap: 70px;
+    padding-bottom: 95px;
+}
+
+
+
+@media (max-width:1335px){
+    .imgReadMore{
+    width: 353px;
+    }
+
+
+    .date{
+    font-size: 12px;
+    }
+    
+    
+    .golden{
+    font-size: 30px;
+    
+    }
+    
+    
+    .pOne{
+        font-size: 18px;
+        width: 538px;
+    }
+    
+    .ptwo{
+        font-size: 18px;
+        width: 538px;
+    }
+    
+    
+    .pContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+    }
+    .oneContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 51px;
+    }
+    
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    
+    .oneP{
+     
+    font-size: 20px;
+   
+    }
+    
+    
+    .twoP{
+        font-size: 18px;
+      
+    }
+    
+    
+    .twoContainer{
+        padding-top: 41px;  
+    }
+    
+    .img2{
+    width: 353px;
+    }
+    
+    
+    
+    
+    .pCursor{
+    font-size: 18px;
+    width: 508px;
+    }
+    
+    
+    .threeContainer{
+     
+        gap: 49px;
+  }
+    
+}
+
+
+@media (max-width:986px){
+    
+    
+        .date{
+        font-size: 12px;
+        }
+        
+        
+        .golden{
+        font-size: 20px;
+        
+        }
+        
+        
+        .pOne{
+            font-size: 16px;
+            width: 338px;
+        }
+        
+        .ptwo{
+            font-size: 16px;
+            width: 338px;
+        }
+        
+        
+        
+        .oneContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 31px;
+        }
+        
+        
+      
+        
+        .oneP{
+         
+        font-size: 16px;
+       
+        }
+        
+        
+        .twoP{
+            font-size: 16px;
+          
+        }
+        
+        
+        .twoContainer{
+            padding-top: 21px;  
+        }
+        
+        .img2{
+        width: 353px;
+        }
+        
+        
+        
+        
+        .pCursor{
+        font-size: 18px;
+        width: 308px;
+        }
+        
+        
+        .threeContainer{
+         
+            gap: 29px;
+      }
+        
+}
+
+
+@media (max-width:755px){
+    .img2{
+        display: none;
+    }
+
+    .imgReadMore{
+        display: none;
+    }
+
+}
+
+
+@media(max-width:380px){
+    
+    .date{
+        font-size: 8px;
+        }
+        
+        
+        .golden{
+        font-size: 18px;
+        
+        }
+        .pOne{
+            font-size: 10px;
+            width: 238px;
+        }
+        
+        .ptwo{
+            font-size: 10px;
+            width: 228px;
+        }
+        
+        
+        
+        .oneContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 31px;
+        }
+        
+        
+      
+        
+        .oneP{
+         
+        font-size: 16px;
+       
+        }
+        
+        
+        .twoP{
+            font-size: 16px;
+          
+        }
+        
+        
+        .twoContainer{
+            padding-top: 21px;  
+        }
+        
+        .img2{
+        width: 353px;
+        }
+        
+        
+        
+        
+        .pCursor{
+        font-size: 10px;
+        width: 308px;
+        }
+        
+        
+        .threeContainer{
+         
+            gap: 19px;
+      }
+   
+}

@@ -1,0 +1,112 @@
+.oneContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 33px;
+}
+
+.iconlocation{
+    width: 20px;
+    height: 20px;
+}
+
+
+.hederContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 28px;
+    border: 1px solid #bbb3af;
+height: 83px;
+}
+
+.threeContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    gap: 33px;
+    padding: 0 28px;
+}
+
+.icons{
+    display: flex;
+    gap: 44px;
+}
+
+h4{
+font-weight: 400;
+font-size: 17px;
+text-align: center;
+color: rgba(0, 0, 0, 0.67);
+cursor: pointer;
+}
+
+
+h4:hover{
+    color: #d3a15b;
+}
+
+
+.h2{
+font-weight: 400;
+font-size: 27px;
+text-align: center;
+color: #000;
+cursor: pointer;
+}
+
+.h2:hover{
+    color: #d3a15b;
+
+}
+input{
+border-bottom: 3px solid black;
+width: 196px;
+height: 32px;
+border: none;
+border-bottom: 2px solid #333; 
+font-size: 16px;
+outline: none; 
+}
+
+img{
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 1100px){
+    h2{
+        display: none;
+    }
+    h4{
+        font-size: 8px;
+    }
+
+    .icons{
+        display: flex;
+        gap: 15px;
+    }
+
+    input{
+        width: 100px;
+        height: 20px;
+    }
+
+    .icon{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media(max-width:530px){
+    .hederContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100px ;
+        padding:  28px;
+
+      }
+}

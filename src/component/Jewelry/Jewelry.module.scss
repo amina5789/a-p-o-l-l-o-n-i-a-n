@@ -1,0 +1,67 @@
+.jewelryContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 33px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+}
+
+.img{
+    width: 210px;
+height: 238px;
+}
+
+
+
+.pTitle{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+color: #323232;
+}
+
+.pPrace{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+color: #8a8a8a;
+}
+
+// -----------------------
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.pagination button {
+    background-color: var(--gold);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: var(--gooold);
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+

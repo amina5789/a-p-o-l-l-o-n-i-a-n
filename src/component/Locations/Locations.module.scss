@@ -1,0 +1,34 @@
+.p{
+    font-family: var(--second-family);
+// font-style: italic;
+font-weight: 900;
+font-size: 100px;
+text-align: center;
+color: #000;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+.contacts{
+    font-family: var(--second-family);
+// text-align: center;
+}
+
+
+.containerContacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.aContact{
+    color: #000;
+}
+
+.aContact:hover{
+    color: #a8895d;
+
+}

@@ -1,0 +1,1 @@
+import { Jewelry } from "./Jewelry";

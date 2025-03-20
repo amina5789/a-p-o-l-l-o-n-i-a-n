@@ -1,0 +1,1 @@
+import { NewReleases } from "./NewReleases";

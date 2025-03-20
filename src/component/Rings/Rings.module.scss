@@ -1,0 +1,56 @@
+.h2{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 55px;
+    text-align: center;
+    color: #000;
+}
+
+
+.amet{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #646464;
+}
+
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+        
+}
+
+
+.img{
+    width: 210px;
+    height: 238px;
+}
+
+
+.title{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #323232;
+}
+
+.prace{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #8a8a8a;
+}
+
+
+.earringsSection{
+    padding-top: 30px;
+}
+

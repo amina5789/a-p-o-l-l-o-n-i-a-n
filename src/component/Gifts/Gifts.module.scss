@@ -1,0 +1,64 @@
+.h2Gifts{
+    font-family: var(--second-family);
+font-weight: 400;
+font-size: 55px;
+text-align: center;
+color: #000;
+}
+
+.amet{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 20px;
+text-align: center;
+color: #646464;
+}
+
+.gif{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+
+.giftsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.imgGifts{
+    width: 400px;
+    height: 400px;
+}
+
+
+.titleGifts,
+.priceGifts{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 20px;
+text-align: center;
+color: #4d4d4d;
+}
+
+@media(max-width:445px){
+    .imgGifts{
+        width: 300px;
+        height: 300px;
+    }
+    
+}
+
+@media(max-width:340px){
+    .imgGifts{
+        width: 200px;
+        height: 200px;
+    }
+}
