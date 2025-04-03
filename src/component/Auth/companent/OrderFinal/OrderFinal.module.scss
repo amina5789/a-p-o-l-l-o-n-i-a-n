@@ -1,0 +1,81 @@
+.orderFinalSection{
+    width: 100%;
+height: 659px;
+padding-bottom: 169px;
+padding-top: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.orderFinal{
+    font-family: var(--second-family);
+font-weight: 700;
+font-size: 33px;
+text-align: center;
+color: #000;
+}
+.copyEmail{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 18px;
+text-align: center;
+color: #545454;
+}
+
+.containerTotal{
+    border-bottom: 1px solid #dfd9d6;
+border-top: 1px solid #dfd9d6;
+width: 938px;
+height: 253px;
+background: #fff;
+}
+
+.totalFinal{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 19px;
+color: #000;
+}
+
+.containerTotal{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+height: 300px;
+}
+
+.pdata{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+color: #000;
+color: #5c5c5c;
+}
+
+// .containerTotal{
+//     background-color: red;
+// }
+.pAddres{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+
+}
+.btnFinal{
+    border: 1px solid #363636;
+width: 191px;
+height: 43px;
+background: rgba(0, 0, 0, 0.78);
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+text-align: center;
+color: #fff;
+border: none;
+&:hover{
+    background: #000;
+}
+}

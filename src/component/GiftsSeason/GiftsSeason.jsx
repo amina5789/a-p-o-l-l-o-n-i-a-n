@@ -17,7 +17,7 @@ export function GiftsSeason(){
 </div>
 
 
-<button className={stylle.btnGift} onClick={()=>navigit(ROUTER_PATHS.gifts)}>SHOP GIFTS</button>
+<button className={stylle.btnGift} onClick={()=>navigit(ROUTER_PATHS.gift)}>SHOP GIFTS</button>
 </div>
 
 

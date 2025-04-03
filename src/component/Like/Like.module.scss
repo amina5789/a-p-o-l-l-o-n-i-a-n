@@ -1,0 +1,108 @@
+.carth3{
+    font-family: var(--second-family);
+font-weight: 400;
+font-size: 55px;
+text-align: center;
+color: #000;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+.loading{
+    font-family: var(--second-family);
+font-style: italic;
+font-weight: 400;
+font-size: 28px;
+text-align: center;
+color: #000;
+padding-top: 30px;
+}
+
+
+.cartContainer{
+    min-height: 400px;
+}
+
+
+.btnDelete{
+  
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.img{
+    width: 349px;
+height: 385px;
+}
+
+
+.cartItem{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+
+}
+
+
+
+
+.pTitle{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 25px;
+    color: #000;
+}
+
+
+.pPrace{
+    font-family: var(--font-family);
+font-weight: 700;
+font-size: 23px;
+color: rgba(0, 0, 0, 0.54);
+}
+
+.containerTitel{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.cartItem{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 50px;
+}
+
+
+.counterValue{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 15px;
+color: #686868;
+}
+
+
+@media(max-width:595px){
+    .pTitle{
+        font-family: var(--second-family);
+        font-weight: 300;
+        font-size: 15px;
+        color: #000;
+    }
+    .img{
+        width: 249px;
+    height: 285px;
+    }
+    
+}
+
+
+@media(max-width:420px){
+    .img{
+        width: 149px;
+    height: 185px;
+    }
+}

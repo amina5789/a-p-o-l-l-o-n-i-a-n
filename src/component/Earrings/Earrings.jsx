@@ -1,29 +1,58 @@
-import {  jewelry } from './../../mockData/mockData'
-import stylle from './Earrings.module.scss'
+import { useState, useEffect } from "react";
+import stylle from "./Earrings.module.scss";
+import { Link } from "react-router-dom";
 
 
-export function Earrings(){
-    const categoryId = 2;
-const filteredJewelry = jewelry.filter(item => item.categor === categoryId);
-    return <section className={stylle.earringsSection}>
 
-    <div className={stylle.neck}>
+export function Earrings() {
+  const categoryId = 2;
+  const [jewelry, setJewelry] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchJewelry = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/jewelry");
+        if (!response.ok) {
+          throw new Error("Ошибка загрузки данных");
+        }
+        const data = await response.json();
+        setJewelry(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJewelry();
+  }, []);
+
+  const filteredJewelry = jewelry.filter((item) => item.categor === categoryId);
+
+  if (loading) return <p>Загрузка...</p>;
+  if (error) return <p>Ошибка: {error}</p>;
+
+  return (
+    <section className={stylle.earringsSection}>
+      <div className={stylle.neck}>
         <h2 className={stylle.h2}>Earrings</h2>
         <h2 className={stylle.amet}>Lorem ipsum dolor sit amet.</h2>
-    </div>
-    
-    
-    <div className={stylle.container} >
-    {filteredJewelry.map(({ title, img, prace }, index) => (
-      <div key={index} >
-      <img src={img} alt={title}  className={stylle.img}/>
-      <div>
-          <p className={stylle.title}>{title}</p>
-          <p  className={stylle.prace}>{`$${prace}`}</p>
       </div>
-    </div>
-    ))}
-    </div>
-        </section>
-}
 
+      <div className={stylle.container}>
+        {filteredJewelry.map(({ id, title, img, prace }) => (
+          <div key={id}>
+            <Link to={`/product/${id}`}>
+            <img src={img} alt={title} className={stylle.img} /></Link>
+            <div>
+              <p className={stylle.title}>{title}</p>
+              <p className={stylle.price}>{`$${prace}`}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

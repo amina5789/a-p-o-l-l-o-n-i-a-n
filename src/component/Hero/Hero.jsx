@@ -8,7 +8,7 @@ export function Hero(){
         <div className={styles.heroContainer}>
             <h5 className={styles.autumn}>The autumn equinox</h5>
             <div className={styles.pConteiner}>
-            <p className={styles.p}>Fall has arrived.</p>
+            {/* <p className={styles.p}>Fall has arrived.</p> */}
             <p className={styles.p}>Shop for our new releases starting today.</p>
             </div>
           

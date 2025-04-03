@@ -56,7 +56,7 @@ color: #8a8a8a;
 
 .pagination button:disabled {
     background-color: #ccc;
-    cursor: not-allowed;
+    // cursor: not-allowed;
 }
 
 .pagination span {
@@ -65,3 +65,16 @@ color: #8a8a8a;
     color: #333;
 }
 
+
+.btnCart{
+width: 110px;
+height: 31px;
+background-color: var(--gold);
+cursor: pointer;
+border: none;
+color: #fff;
+}
+
+.btnCart:hover{
+    background-color: var(--gooold);
+}

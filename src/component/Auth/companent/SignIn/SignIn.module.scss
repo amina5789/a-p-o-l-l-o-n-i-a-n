@@ -1,0 +1,55 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  .save {
+    height: auto;
+    border: 1px solid rgba(170, 123, 97, 0.84);
+width: 329px;
+height: 48px;
+background-color: var(--gold);
+border: none;
+font-family: var( --font-family);
+font-weight: 400;
+font-size: 18px;
+text-align: center;
+color: #fff;
+&:hover{
+    background-color: var(--gooold);
+}
+  }
+
+  .inputName{
+    width: 329px;
+    height: 41px;
+    border: 1px solid rgba(170, 123, 97, 0.84);
+    color: var(--gold);
+    border: none;  
+    outline: none;
+    border-bottom: 1px solid rgba(170, 123, 97, 0.84);
+  }
+
+  .login{
+    text-align: center;
+    font-family: var(--second-family);
+font-style: italic;
+font-weight: 500;
+font-size: 45px;
+text-align: center;
+color: var(--gold);
+  }
+
+  @media(max-width:390px){
+    .save{
+      width: 229px;
+height: 48px;
+    }
+
+    .inputName{
+      width: 229px;
+      height: 38px;}
+
+  }

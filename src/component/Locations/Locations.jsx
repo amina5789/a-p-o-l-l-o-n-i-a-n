@@ -28,7 +28,7 @@ export const Locations = () => {
           >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[street.lat, street.lng]}>
-              <Popup>{street.name}, New York, NY</Popup>
+              <Popup>{street.name} , New York, NY</Popup>
             </Marker>
           </MapContainer>
           <p style={{ marginTop: "10px", fontSize: "18px" }} className={styllle.p}>

@@ -1,0 +1,38 @@
+.containerProfile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 559px;
+    padding-bottom: 169px;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.profile{
+    font-family: var(--second-family);
+font-weight: 400;
+font-size: 40px;
+text-align: center;
+color: #000;
+}
+
+.name,
+.email{
+    font-family: var(--second-family);
+}
+.btn{
+    border: 1px solid #363636;
+width: 191px;
+height: 43px;
+background: rgba(0, 0, 0, 0.78);
+color: #fff;
+border: none;
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+text-align: center;
+color: #fff;
+&:hover{
+    background: #000;
+}
+}

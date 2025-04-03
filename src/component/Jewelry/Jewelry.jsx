@@ -1,50 +1,85 @@
-import { useState } from 'react';
-import { jewelry } from '../../mockData/mockData';
-import stylle from './Jewelry.module.scss';
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchJewelry, changePage, setPage } from "../../redux/jewelrySlice";
+import { addToCart } from "../../redux/cartSlice";
+import stylle from "./Jewelry.module.scss";
+import { Link } from "react-router-dom";
 
 export function Jewelry() {
-    const itemsPerPage = 12; 
-    const [currentPage, setCurrentPage] = useState(1);
+  const dispatch = useDispatch();
 
-    const totalPages = Math.ceil(jewelry.length / itemsPerPage);
+  const {
+    items: jewelry,
+    totalItems,
+    currentPage,
+    itemsPerPage,
+    status,
+  } = useSelector((state) => state.jewelry);
 
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const currentItems = jewelry.slice(startIndex, endIndex);
+  const query = useSelector((state) => state.search.query.toLowerCase());
+  const filteredItems = jewelry.filter((item) =>
+    item.title.toLowerCase().includes(query)
+  );
 
-    const nextPage = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1);
-        }
-    };
+  const totalPages = totalItems > 0 ? Math.ceil(totalItems / itemsPerPage) : 1;
 
-    const prevPage = () => {
-        if (currentPage > 1) {
-            setCurrentPage(currentPage - 1);
-        }
-    };
+  useEffect(() => {
+    dispatch(fetchJewelry());
+  }, [dispatch, currentPage, query]);
 
-    return (
-        <div className={stylle.jewelryContainer}>
-            {currentItems.map(({ title, img, prace }, index) => (
-                <div key={index} className={stylle.item}>
-                    <img src={img} alt={title} className={stylle.img} />
-                    <div>
-                        <p className={stylle.pTitle}>{title}</p>
-                        <p className={stylle.pPrace}>{`$${prace}`}</p>
-                    </div>
-                </div>
-            ))}
+  function renderPagination() {
+    const btns = [];
+    for (let i = 1; i <= totalPages; i++) {
+      btns.push(
+        <button
+          key={i}
+          onClick={() => dispatch(changePage(i))}
+          className={`${stylle.paginationBtn} ${
+            i === currentPage ? stylle.active : ""
+          }`}
+        >
+          {i}
+        </button>
+      );
+    }
+    return btns;
+  }
 
-            <div className={stylle.pagination}>
-                <button onClick={prevPage} disabled={currentPage === 1}>
-                    Назад
-                </button>
-                <span>{`${currentPage} / ${totalPages}`}</span>
-                <button onClick={nextPage} disabled={currentPage === totalPages}>
-                    Вперед
-                </button>
+  return (
+    <div className={stylle.jewelryContainer}>
+      {status === "loading" ? (
+        <p>Загрузка...</p>
+      ) : status === "failed" ? (
+        <p>Ошибка загрузки данных</p>
+      ) : (
+        filteredItems.map(({ id, title, img, prace }) => (
+          <div key={id} className={stylle.item}>
+            <Link to={`/product/${id}`}>
+              <img src={img} alt={title} className={stylle.img} />
+            </Link>
+            <div>
+              <p className={stylle.pTitle}>{title}</p>
+              <p className={stylle.pPrace}>{`$${prace}`}</p>
             </div>
-        </div>
-    );
+            <button
+              onClick={() => dispatch(addToCart({ id, title, img, prace, quantity: 1 }))}
+              className={stylle.btnCart}
+            >
+              ADD TO CART
+            </button>
+          </div>
+        ))
+      )}
+
+      <div className={stylle.pagination}>
+        {/* <button onClick={() => dispatch(setPage(currentPage - 1))} >
+                    Back
+                </button> */}
+        {renderPagination()}
+        {/* <button onClick={() => dispatch(setPage(currentPage + 1))} >
+                    Forward
+                </button> */}
+      </div>
+    </div>
+  );
 }

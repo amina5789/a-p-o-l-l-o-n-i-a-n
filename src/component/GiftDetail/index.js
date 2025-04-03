@@ -1,0 +1,1 @@
+export {GiftDetail} from  './GiftDetail'

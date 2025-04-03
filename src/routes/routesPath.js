@@ -1,9 +1,11 @@
+import { OrderFrom } from "../component/OrderForm";
+
 export const ROUTER_PATHS = {
     main: '/',
     jewelry: '/jewelry',
     AboutUsSection: '/AboutUsSection',
     readMore: '/readMore',
-    gifts: '/gifts',
+    gift: '/gift',
     newReleases: '/newReleases',
     locations: '/locations',
     autumnColection: '/autumnColection',
@@ -12,7 +14,13 @@ export const ROUTER_PATHS = {
     Bracelets:'/Bracelets',
     Rings:'/Rings',
     Charms:'/Charms',
-    // locations: '/locations',
+    Cart:'/Cart',
+    Like:'/like',
+    Profile:'/Profile',
+    Auth:'/auth',
+    OrderFrom:'/orderFrom',
+    orderFinal: '/orderFinal',
     product: '/product/:id',
+    giftProduct: '/gift/:id',
   }
   
