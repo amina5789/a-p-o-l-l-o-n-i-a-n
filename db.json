@@ -1877,6 +1877,52 @@
       ],
       "total": "2900.00",
       "id": 47
+    },
+    {
+      "user": {
+        "email": "aminamerzamedova@gmail.com",
+        "phone": "0556251575",
+        "address": "Sadovaya 47",
+        "city": "Leninskoe",
+        "state": "fthfhfg",
+        "zip": "724319",
+        "deliveryMethod": "inPerson"
+      },
+      "items": [
+        {
+          "id": "2",
+          "title": " HEART DROP ",
+          "img": "https://i.pinimg.com/474x/fa/7d/5a/fa7d5a87e0209a076fe128096d299b8d.jpg",
+          "prace": 200,
+          "quantity": 4
+        },
+        {
+          "id": "3",
+          "img": "https://i.pinimg.com/474x/31/40/cb/3140cbcb61dcb91f035fee1208c4753f.jpg",
+          "prace": 300,
+          "title": "DIAMOND CHOKER ",
+          "categor": 1,
+          "quantity": 3
+        },
+        {
+          "id": "10",
+          "img": "https://i.pinimg.com/474x/d3/7a/d6/d37ad67441719eebf928caeefc446ae9.jpg",
+          "prace": 300,
+          "title": "FLORA PENDANT ",
+          "categor": 1,
+          "quantity": 3
+        },
+        {
+          "id": "40",
+          "img": "https://i.pinimg.com/474x/cb/87/1e/cb871e247f2334167fc2d3ad92c36f89.jpg",
+          "prace": 100,
+          "title": "Whispering Soul",
+          "categor": 5,
+          "quantity": 3
+        }
+      ],
+      "total": "2900.00",
+      "id": 48
     }
   ]
 }
