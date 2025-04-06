@@ -43,6 +43,7 @@ color: #000;
     padding-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 height: 300px;
+margin-top: 30px;
 }
 
 .pdata{
@@ -62,6 +63,7 @@ color: #5c5c5c;
     justify-content: center;
     gap: 20px;
     flex-direction: column;
+    padding-top: 30px;
 
 }
 .btnFinal{
@@ -78,4 +80,39 @@ border: none;
 &:hover{
     background: #000;
 }
+}
+
+
+@media(max-width:987px){
+    .containerTotal{
+    width: 538px;
+    height: 353px;
+    }
+}
+
+@media(max-width:604px){
+    .containerTotal{
+    width: 338px;
+    height: 453px;
+    }
+    .pAddres{
+     padding-left: 20px;
+        padding-top: 30px;
+    }
+    .orderFinal{
+    font-weight: 400;
+    font-size: 20px;
+    }
+    .copyEmail{
+    font-weight: 300;
+    font-size: 10px;
+    
+    }
+}
+
+@media(max-width:386px){
+    .containerTotal{
+        width: 280px;
+        height: 353px;
+        } 
 }

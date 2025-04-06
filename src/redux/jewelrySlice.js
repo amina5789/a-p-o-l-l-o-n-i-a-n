@@ -22,11 +22,26 @@ export const fetchJewelry = createAsyncThunk(
     }
 );
 
+export const fetchAllJewelry = createAsyncThunk(
+    "jewelry/fetchAllJewelry",
+    async (_, { rejectWithValue }) => {
+      try {
+        const response = await fetch('http://localhost:5000/jewelry');
+        if (!response.ok) throw new Error("Ошибка загрузки данных");
+        return await response.json();
+      } catch (error) {
+        return rejectWithValue(error.message);
+      }
+    }
+  );
+
+
 
 const jewelrySlice = createSlice({
     name: "jewelry",
     initialState: {
         items: [],
+        allJewerly:[],
         currentPage: 1,
         itemsPerPage:12,
         totalItems: 4,
@@ -51,7 +66,21 @@ const jewelrySlice = createSlice({
             .addCase(fetchJewelry.rejected, (state, action) => {
                 state.status = "failed";
                 state.error = action.error.message;
+            })
+            .addCase(fetchAllJewelry.pending, (state) => {
+                state.status = "loading";
+            })
+            .addCase(fetchAllJewelry.fulfilled, (state, action) => {
+                state.status = "succeeded";
+                state.allJewerly = action.payload;
+
+                state.totalItems = action.payload.totalItems;
+            })
+            .addCase(fetchAllJewelry.rejected, (state, action) => {
+                state.status = "failed";
+                state.error = action.error.message;
             });
+
     },
 });
 

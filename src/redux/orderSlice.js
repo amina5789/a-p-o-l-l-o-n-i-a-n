@@ -13,7 +13,7 @@ export const placeOrder = createAsyncThunk(
   async (orderData, { rejectWithValue, dispatch }) => {
     try {
       const response = await axios.post(BASE_URL, orderData);
-      dispatch(saveOrderData(response.data)); // 👈 Сохраняем заказ в Redux
+      dispatch(saveOrderData(response.data)); 
       return response.data;
     } catch (error) {
       console.error("Ошибка при оформлении заказа:", error);
@@ -27,7 +27,7 @@ const orderSlice = createSlice({
   initialState: {
     orders: [], 
     userData: loadUserData(), 
-    orderDetails: null, // 👈 Добавил для хранения последнего заказа
+    orderDetails: null, 
     status: "idle",
     error: null,
   },
@@ -36,7 +36,7 @@ const orderSlice = createSlice({
       state.userData = action.payload;
       localStorage.setItem("userData", JSON.stringify(action.payload));
     },
-    saveOrderData: (state, action) => {  // 👈 Добавил новый редьюсер
+    saveOrderData: (state, action) => { 
       state.orderDetails = action.payload;
     },
   },
@@ -48,7 +48,7 @@ const orderSlice = createSlice({
       .addCase(placeOrder.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.orders.push(action.payload);
-        state.orderDetails = action.payload; // 👈 Сохраняем заказ в Redux
+        state.orderDetails = action.payload;
       })
       .addCase(placeOrder.rejected, (state, action) => {
         state.status = "failed";
@@ -57,5 +57,5 @@ const orderSlice = createSlice({
   },
 });
 
-export const { saveUserData, saveOrderData } = orderSlice.actions; // 👈 Экспортируем новый редьюсер
+export const { saveUserData, saveOrderData } = orderSlice.actions; 
 export default orderSlice.reducer;

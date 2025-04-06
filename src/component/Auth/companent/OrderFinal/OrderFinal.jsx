@@ -20,7 +20,6 @@ export function OrderFinal() {
                         A copy of your receipt has been sent to your email.
                     </p>
                 </div>
-                <hr className={styl.hrDiv}></hr>
 
                 <div className={styl.containerTotal}>
                     <div className={styl.pAddres}>
