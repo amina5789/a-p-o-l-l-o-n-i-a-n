@@ -19,7 +19,7 @@ export function SignIn({ setHasAccount }) {
     const password = formData.get('password')
 
     if (!email || !password) {
-      setError('Все поля обязательны')
+      setError('All fields are required')
       return
     }
 
@@ -32,10 +32,10 @@ console.log(result);
         localStorage.setItem('user', JSON.stringify(result.user))
         navigate(ROUTER_PATHS.Profile) 
       } else {
-        setError('Ошибка авторизации') 
+        setError('Authorization error') 
       }
     } catch (err) {
-      setError('Ошибка входа') 
+      setError('Login error') 
     }
 
     setLoading(false)
@@ -43,17 +43,17 @@ console.log(result);
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}> 
-      <h1 className={styles.login}>Вход</h1>
+      <h1 className={styles.login}>Login </h1>
       <input className={styles.inputName} type="email" name="email" placeholder="email" />
       <input className={styles.inputName} type="password" name="password" placeholder="password" />
       {error && <p className={styles.error}>{error}</p>} 
 
       <button variant="outlined" className={styles.save} type="button" onClick={() => setHasAccount(false)}>
-        Нет Аккаунта? Зарегистрироваться
+No Account? Register
       </button>
 
       <button className={styles.save} disabled={loading} type="submit"> 
-        {loading ? 'Загрузка...' : 'Войти'}
+        {loading ? '...' : 'Login'}
       </button>
     </form>
   )

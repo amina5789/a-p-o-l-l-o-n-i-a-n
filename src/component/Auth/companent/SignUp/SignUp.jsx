@@ -25,7 +25,7 @@ export function SignUp({ setHasAccount }) {
     const password = formData.get('password')
 
     if (!name || !lastName || !age || !email || !password) {
-      return { error: 'Все поля обязательны' }
+      return { error: 'All fields are required' }
     }
 
     const userData = { name, lastName, age, email, password }

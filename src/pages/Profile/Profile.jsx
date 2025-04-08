@@ -5,6 +5,7 @@ import { Auth } from "../../component/Auth/Auth";
 import { useEffect, useState } from "react";
 import { setUser } from "../../redux/userSlice";
 import stylle from './Profile.module.scss'
+import { ROUTER_PATHS } from "../../routes/routesPath";
 
 export const Profile = () => {
   // const user = useSelector((state) => state.auth.user);
@@ -29,7 +30,7 @@ export const Profile = () => {
 
   const handleLogout = () => {
     dispatch(logout());
-    navigate("/signin");
+    navigate(ROUTER_PATHS.Auth);
   };
 
   if (!isAuth) {

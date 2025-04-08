@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import FallingStars from "./FallingStars"; 
-import { ModalWindow } from "./../ModalWindow/ModalWindow";
+import { ModalWindow } from "../../component/ModalWindow/ModalWindow";
 import style from "./NewReleases.module.scss";
 
 export function NewReleases() {
