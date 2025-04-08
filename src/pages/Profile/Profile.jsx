@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../redux/authSlice";
 import { useNavigate } from "react-router-dom";
-import { Auth } from "../Auth/Auth";
+import { Auth } from "../../component/Auth/Auth";
 import { useEffect, useState } from "react";
 import { setUser } from "../../redux/userSlice";
 import stylle from './Profile.module.scss'

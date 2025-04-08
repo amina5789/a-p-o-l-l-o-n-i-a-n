@@ -1,28 +1,28 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
-import Main from "../Main/Main";
+import Main from "../pages/Main/Main";
 import { ROUTER_PATHS } from "./routesPath";
-import { Jewelry } from "../component/Jewelry/Jewelry";
-import { AboutUsSection } from "../component/AboutUsSection/AboutUsSection";
-import { ReadMore } from "../component/ReadMore/ReadMore";
-import { Gifts } from "../component/Gifts/Gifts";
+import { Jewelry } from "../pages/Jewelry/Jewelry";
+import { AboutUsSection } from "../pages/AboutUsSection/AboutUsSection";
+import { ReadMore } from "../pages/ReadMore/ReadMore";
+import { Gifts } from "../pages/Gifts/Gifts";
 import { NewReleases } from "../component/NewReleases/NewReleases";
-import { Locations } from "../component/Locations/Locations";
-import { AutumnColection } from "../component/AutumnColection/AutumnColection";
+import { Locations } from "../pages/Locations/Locations";
+import { AutumnColection } from "../pages/AutumnColection/AutumnColection";
 import { ModalWindow } from "../component/ModalWindow/ModalWindow";
-import { Necklaces } from "../Necklaces/Necklaces";
-import { Earrings } from "../component/Earrings/Earrings";
-import { Bracelets } from "../component/Bracelets/Bracelets";
-import { Rings } from "../component/Rings/Rings";
-import { Charms } from "../component/Charms/Charms";
-import { Cart } from "../component/Cart/Cart";
-import { Like } from "../component/Like/Like";
-import { Profile } from "../component/Profile/Profile";
+import { Necklaces } from "../pages/Necklaces/Necklaces";
+import { Earrings } from "../pages/Earrings/Earrings";
+import { Bracelets } from "../pages/Bracelets/Bracelets";
+import { Rings } from "../pages/Rings/Rings";
+import { Charms } from "../pages/Charms/Charms";
+import { Cart } from "../pages/Cart/Cart";
+import { Like } from "../pages/Like/Like";
+import { Profile } from "../pages/Profile/Profile";
 import { ProductDetail } from "../component/ProductDetail/ProductDetail";
 import { Auth } from "../component/Auth/Auth";
 import { GiftDetail } from "../component/GiftDetail";
-import { OrderFrom } from "../component/OrderForm";
+import { OrderFrom } from "../pages/OrderForm";
 import { OrderFinal } from "../component/Auth/companent/OrderFinal/OrderFinal";
 export const routes = createBrowserRouter([
   {

@@ -1,4 +1,4 @@
-import { OrderFrom } from "../component/OrderForm";
+import { OrderFrom } from "../pages/OrderForm";
 
 export const ROUTER_PATHS = {
     main: '/',
